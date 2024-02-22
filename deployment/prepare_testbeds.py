@@ -68,10 +68,11 @@ model_sets = [
     eleuther_list,
 ]
 
-data_dir = sys.argv[1]
+data_dir = os.environ.get("DEEPFAKE_DATA_PATH")
+print(data_dir)
+exit(1)
 dataset = load_dataset("yaful/DeepfakeTextDetect")
-if not os.path.exists(data_dir):
-    os.makedirs(data_dir)
+
 """
 csv_path = f"{data_dir}/train.csv"
 train_results = list(csv.reader(open(csv_path,encoding='utf-8-sig')))[1:]
