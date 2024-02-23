@@ -69,8 +69,6 @@ model_sets = [
 ]
 
 data_dir = os.environ.get("DEEPFAKE_DATA_PATH")
-print(data_dir)
-exit(1)
 dataset = load_dataset("yaful/DeepfakeTextDetect")
 
 """
